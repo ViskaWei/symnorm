@@ -1,0 +1,12 @@
+{
+<<<<<<< HEAD
+    "seed": 823,
+=======
+    "seed": 922,
+>>>>>>> 8e8331afff0bb423cea2906d4cfec613c93a0fb3
+    "name": "",
+    "in": "./data/stream",
+    "device":"cpu"
+}
+
+

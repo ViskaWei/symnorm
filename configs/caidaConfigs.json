@@ -1,0 +1,22 @@
+{
+    "config": [
+        "/home/swei20/SymNormSlidingWindows/configs/baseConfigs.json"
+    ],
+    "loop": "mL",
+    "out": "./out/",
+<<<<<<< HEAD
+    "mList": [2, 11, 6],
+    "cList": [2, 5, 1],
+    "rList": [2, 5, 1],
+    "wRList": [2, 0, 1],
+    "ftr": "dst",
+=======
+    "mList": [2, 5, 1],
+    "cList": [2, 2, 1],
+    "rList": [2, 2, 1],
+    "wRList": [2, 0, 1],
+    "ftr": "sport",
+>>>>>>> 8e8331afff0bb423cea2906d4cfec613c93a0fb3
+    "norm":"L",
+    "normDim":2
+}
