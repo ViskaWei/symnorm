@@ -8,12 +8,8 @@ from collections import Counter
 
 class StreamTrace():
     def __init__(self):
-<<<<<<< HEAD
         self.freqVec = None
         self.cnt = None
-=======
-        self.need = None
->>>>>>> 8e8331afff0bb423cea2906d4cfec613c93a0fb3
 
 class Stream():
     def __init__(self, mMax, n, ftr, alpha=0.05, trace=None):
@@ -30,14 +26,8 @@ class Stream():
 
         if self.ftr == "tst":
             self.coord = self.create_test_stream()
-<<<<<<< HEAD
             assert (self.mMax == len(self.coord))
             self.n = 3201
-=======
-            self.mMax = len(self.coord)
-            self.n = 3201
-            # self.mList = [self.mMax]
->>>>>>> 8e8331afff0bb423cea2906d4cfec613c93a0fb3
 
         elif self.ftr == "rd":
             if self.n is None: 
@@ -50,7 +40,6 @@ class Stream():
 
             self.coord = self.create_HH_stream(self.mMax, self.n, alpha=self.alpha, shuffle=shuffle)
 
-<<<<<<< HEAD
         elif self.ftr == "src" or self.ftr == 'dst' or self.ftr[-4:] == "port":
             self.coord = self.load_CAIDA()[:self.mMax]
             # self.n = self.get_n_from_ftr()
@@ -61,14 +50,6 @@ class Stream():
             self.trace.cnt = Counter(self.coord)
             self.trace.freqVec = np.array(list(self.trace.cnt.values()))
             
-=======
-        elif self.ftr == "src" or self.ftr[-4:] == "port":
-            self.coord = self.load_CAIDA()
-            self.mMax = len(self.coord)
-            self.n = self.get_n_from_ftr()
-        # logging.info(f'{self.normType}-norm of {self.ftr} Stream {self.mList[-1]} with dict {self.n}.')
-
->>>>>>> 8e8331afff0bb423cea2906d4cfec613c93a0fb3
 ################################################# TEST ##############################################
     @staticmethod
     def create_test_stream():
@@ -112,27 +93,17 @@ class Stream():
 ################################################# SOURCE ##############################################
 
     def load_CAIDA(self):
-<<<<<<< HEAD
         dataDir = '/home/swei20/SymNormSlidingWindows/data/'
         if self.ftr == 'dst':
             data = np.loadtxt(f'{dataDir}coord/caida_{self.ftr}_m1M.txt')
         else:
             data = np.loadtxt(f'{dataDir}stream/traffic_{self.ftr}.txt')
-=======
-        dataDir = '/home/swei20/SymNormSlidingWindows/data/stream/'
-        data = np.loadtxt(f'{dataDir}traffic_{self.ftr}.txt')
->>>>>>> 8e8331afff0bb423cea2906d4cfec613c93a0fb3
         return data
 
     def get_n_from_ftr(self):
         if self.ftr[-4:] == 'port':
-<<<<<<< HEAD
             return 2 ** 16
             # return 10000
-=======
-            # return 2 ** 16
-            return 10000
->>>>>>> 8e8331afff0bb423cea2906d4cfec613c93a0fb3
         elif (self.ftr =='src' or self.ftr == 'dst'):
             # return 2 ** 32
             return 10000
