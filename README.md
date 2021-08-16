@@ -1,5 +1,5 @@
-# SymNormSlidingWindows
-Vladimir Braverman, Samson Zhou
+# Symmetric Norm Estimation and Regression on Sliding Windows
+Vladimir Braverman, Viska Wei, Samson Zhou
 ## Run from terminal
     $ ./scripts/main.sh 
 
